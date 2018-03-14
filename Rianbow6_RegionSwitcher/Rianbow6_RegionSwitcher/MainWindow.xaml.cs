@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Rianbow6_RegionSwitcher
 {
@@ -50,5 +51,28 @@ namespace Rianbow6_RegionSwitcher
 
 
         }
+
+        private void Listbbox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object selectArray = Listbbox1.SelectedItem;
+            string rua = selectArray.ToString();
+            //MessageBox.Show(new DirectoryInfo(rua).Name);
+            PlayerIDLable.Content = new DirectoryInfo(rua).Name;
+            rua = rua + "\\GameSettings.ini";
+            RegionLabel.Content = IniReadValue("ONLINE", "DataCenterHint", rua);
+
+
+        }
+
+        [DllImport("kernel32")]
+        private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+
+        public string IniReadValue(string Section, string Key,string path)
+        {
+            StringBuilder temp = new StringBuilder(255);
+            int i = GetPrivateProfileString(Section, Key, "", temp, 255, path);
+            return temp.ToString();
+        }
+
     }
 }

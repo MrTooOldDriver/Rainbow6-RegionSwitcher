@@ -6,14 +6,23 @@
         xmlns:local="clr-namespace:Rianbow6_RegionSwitcher"
         xmlns:Properties="clr-namespace:Rianbow6_RegionSwitcher.Properties" x:Class="Rianbow6_RegionSwitcher.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="FAC战队专用R6区域切换器" Height="361" Width="622">
     <Grid>
-        <Button Content="劳资只是一个测试按钮" HorizontalAlignment="Left" Margin="174,220,0,0" VerticalAlignment="Top" Width="214" Height="60" Click="Button_Click"/>
-        <ListBox x:Name="Listbbox1" HorizontalAlignment="Left" Height="100" Margin="26,27,0,0" VerticalAlignment="Top" Width="235">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="150*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="劳资只是一个测试按钮" HorizontalAlignment="Left" Margin="174,220,0,0" VerticalAlignment="Top" Width="214" Height="60" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="Listbbox1" HorizontalAlignment="Left" Height="100" Margin="25,27,0,0" VerticalAlignment="Top" Width="235" SelectionChanged="Listbbox1_SelectionChanged">
             <ListBox.DataContext>
                 <Properties:Settings/>
             </ListBox.DataContext>
         </ListBox>
+        <Label x:Name="PlayerIDLable" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,27,0,0" Width="312" Height="30" Grid.ColumnSpan="2"/>
+        <Label x:Name="RegionLabel" Content="Label" HorizontalAlignment="Left" Margin="278,99,0,0" VerticalAlignment="Top" Height="28" Width="99" Grid.ColumnSpan="2"/>
+        <Label Content="本地可用配置文件" HorizontalAlignment="Left" Margin="25,1,0,0" VerticalAlignment="Top"/>
+        <Label Content="当前玩家ID" HorizontalAlignment="Left" Margin="276,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="112"/>
+        <Label Content="当前玩家所在游戏区域" HorizontalAlignment="Left" Margin="278,62,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="136"/>
 
     </Grid>
 </Window>
