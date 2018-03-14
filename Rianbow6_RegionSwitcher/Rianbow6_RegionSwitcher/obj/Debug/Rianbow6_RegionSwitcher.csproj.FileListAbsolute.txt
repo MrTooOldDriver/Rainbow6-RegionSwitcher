@@ -1,0 +1,16 @@
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\bin\Debug\Rianbow6_RegionSwitcher.exe.config
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\bin\Debug\Rianbow6_RegionSwitcher.exe
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\bin\Debug\Rianbow6_RegionSwitcher.pdb
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.csprojResolveAssemblyReference.cache
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\MainWindow.g.cs
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\App.g.cs
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher_MarkupCompile.cache
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher_MarkupCompile.lref
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\MainWindow.baml
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.g.resources
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.Properties.Resources.resources
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.csproj.GenerateResource.Cache
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.csproj.CoreCompileInputs.cache
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.exe
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\Rianbow6_RegionSwitcher.pdb
+C:\Users\Hantao Zhong\Documents\GitHub\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\Rianbow6_RegionSwitcher\obj\Debug\GeneratedInternalTypeHelper.g.cs

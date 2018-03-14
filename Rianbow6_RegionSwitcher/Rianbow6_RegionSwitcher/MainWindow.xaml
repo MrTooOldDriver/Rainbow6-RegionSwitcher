@@ -1,12 +1,19 @@
-﻿<Window x:Class="Rianbow6_RegionSwitcher.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rianbow6_RegionSwitcher"
+        xmlns:Properties="clr-namespace:Rianbow6_RegionSwitcher.Properties" x:Class="Rianbow6_RegionSwitcher.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button Content="劳资只是一个测试按钮" HorizontalAlignment="Left" Margin="174,220,0,0" VerticalAlignment="Top" Width="214" Height="60" Click="Button_Click"/>
+        <ListBox x:Name="Listbbox1" HorizontalAlignment="Left" Height="100" Margin="26,27,0,0" VerticalAlignment="Top" Width="235">
+            <ListBox.DataContext>
+                <Properties:Settings/>
+            </ListBox.DataContext>
+        </ListBox>
+
     </Grid>
 </Window>
