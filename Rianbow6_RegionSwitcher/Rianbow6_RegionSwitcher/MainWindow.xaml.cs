@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Windows.Media;
+using System.Drawing;
 
 namespace Rianbow6_RegionSwitcher
 {
@@ -25,31 +27,30 @@ namespace Rianbow6_RegionSwitcher
         public MainWindow()
         {
             InitializeComponent();
+            LoadPath();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-
+        public void LoadPath()
         {
             string gameSettingFilesLocation = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\My Games\\Rainbow Six - Siege";
             if (Directory.Exists(gameSettingFilesLocation))
             {
-                MessageBox.Show("Rua,存在的");
-
+                StageLable.Content = "很好，你安装了彩虹";
+                StageLable.Foreground = new SolidColorBrush(Colors.Green);
             }
             else
             {
-                MessageBox.Show("你连彩虹都没安装，真鸡儿丢人，删软件吧兄弟");
+                MessageBox.Show("RUA,你连彩虹都没安装，换毛区?","丢人的");
                 //TODO:丢人的没安装彩虹 强制播放一次HOP和魔王医生来进行谴责 同时背景循环机枪哥鬼畜
+                StageLable.Content = "你根本不是彩虹玩家！";
+                StageLable.Foreground = new SolidColorBrush(Colors.Red);
             }
 
             string[] emo = Directory.GetDirectories(gameSettingFilesLocation);
-            MessageBox.Show("发现" + emo.Length + "个垃圾玩家");
+            //MessageBox.Show("发现" + emo.Length + "个垃圾玩家");
+            FoundedLabel.Content = emo.Length + "玩家";
             object[] array = Directory.GetDirectories(gameSettingFilesLocation);
-
-            //Listbbox1.Items.Add(array[0]);
             Listbbox1.ItemsSource = array;
-
-
         }
 
         private void Listbbox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -90,7 +91,7 @@ namespace Rianbow6_RegionSwitcher
             string rua = selectArray.ToString();
             rua = rua + "\\GameSettings.ini";
             IniWriteValue("ONLINE","DataCenterHint",SwiterBox.SelectedItem.ToString(),rua);
-            MessageBox.Show("区域已经修改到"+ SwiterBox.SelectedItem.ToString());
+            MessageBox.Show("区域已经修改到"+ SwiterBox.SelectedItem.ToString(),"成功");
             RegionLabel.Content = IniReadValue("ONLINE", "DataCenterHint", rua);
         }
 
