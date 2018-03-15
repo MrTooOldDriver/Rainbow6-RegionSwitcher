@@ -23,6 +23,8 @@
         <Label Content="本地可用配置文件" HorizontalAlignment="Left" Margin="25,1,0,0" VerticalAlignment="Top"/>
         <Label Content="当前玩家ID" HorizontalAlignment="Left" Margin="276,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="112"/>
         <Label Content="当前玩家所在游戏区域" HorizontalAlignment="Left" Margin="278,62,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="136"/>
+        <ComboBox x:Name="SwiterBox" HorizontalAlignment="Left" Margin="278,168,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" IsReadOnly="True" SelectionChanged="SwiterBox_SelectionChanged"/>
+        <Label Grid.ColumnSpan="2" Content="切换到" HorizontalAlignment="Left" Margin="278,132,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

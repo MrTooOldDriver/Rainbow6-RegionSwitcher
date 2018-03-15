@@ -60,12 +60,15 @@ namespace Rianbow6_RegionSwitcher
             PlayerIDLable.Content = new DirectoryInfo(rua).Name;
             rua = rua + "\\GameSettings.ini";
             RegionLabel.Content = IniReadValue("ONLINE", "DataCenterHint", rua);
-
-
+            LoadSwiterBox();
         }
 
         [DllImport("kernel32")]
         private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+
+        [DllImport("kernel32")]
+        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
+
 
         public string IniReadValue(string Section, string Key,string path)
         {
@@ -74,5 +77,39 @@ namespace Rianbow6_RegionSwitcher
             return temp.ToString();
         }
 
+        public void IniWriteValue(string Section, string Key, string Value,string path)
+        {
+            WritePrivateProfileString(Section, Key, Value, path);
+        }
+
+
+
+        private void SwiterBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object selectArray = Listbbox1.SelectedItem;
+            string rua = selectArray.ToString();
+            rua = rua + "\\GameSettings.ini";
+            IniWriteValue("ONLINE","DataCenterHint",SwiterBox.SelectedItem.ToString(),rua);
+            MessageBox.Show("区域已经修改到"+ SwiterBox.SelectedItem.ToString());
+            RegionLabel.Content = IniReadValue("ONLINE", "DataCenterHint", rua);
+        }
+
+        public void LoadSwiterBox()
+        {
+            object[] Regions = new object[12];
+            Regions[0] = "default";
+            Regions[1] = "eus";
+            Regions[2] = "cus";
+            Regions[3] = "scus";
+            Regions[4] = "wus";
+            Regions[5] = "sbr";
+            Regions[6] = "neu";
+            Regions[7] = "weu";
+            Regions[8] = "eas";
+            Regions[9] = "seas";
+            Regions[10] = "eau";
+            Regions[11] = "wja";
+            SwiterBox.ItemsSource = Regions;
+        }
     }
 }
